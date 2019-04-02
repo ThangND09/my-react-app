@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
-
+import Projects from './Projects'
 
 class App extends Component {
 
     // state = {readMore : false};
+    
+    // changeReadMore = () => {
+    //     this.setState({ readMore : !this.state.readMore});
+    // }
 
     constructor() {
         super();
@@ -11,10 +15,6 @@ class App extends Component {
 
         this.changeReadMore = this.changeReadMore.bind(this);
     }
-
-    // changeReadMore = () => {
-    //     this.setState({ readMore : !this.state.readMore});
-    // }
 
     changeReadMore() {
         this.setState({ readMore : !this.state.readMore});
@@ -36,7 +36,8 @@ class App extends Component {
                         <button onClick={this.changeReadMore}>Read More</button>
                     )
                 }   
-                
+                <hr/>  
+                <Projects/>
             </div>
         )
     }
