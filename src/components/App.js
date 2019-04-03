@@ -1,18 +1,14 @@
 import React, { Component } from 'react';
-import Projects from './Projects'
+import Projects from './Projects';
+import SocialProfiles from './SocialProfiles';
+import Title from './Titles'
+
 
 class App extends Component {
-
-    // state = {readMore : false};
-    
-    // changeReadMore = () => {
-    //     this.setState({ readMore : !this.state.readMore});
-    // }
 
     constructor() {
         super();
         this.state = { readMore : false};
-
         this.changeReadMore = this.changeReadMore.bind(this);
     }
 
@@ -23,12 +19,14 @@ class App extends Component {
     render() {
         return (
             <div> 
-                <h1>Hello 222!</h1>
+                <h1>Hello !</h1>
                 <p> My name is Thang</p>
                 <p> I am studying React</p>
+                <Title/>
                 {
                     this.state.readMore ? (
                         <div> 
+                            
                             <p> I am living in Da Nang and working for Fsoft </p>
                             <button onClick={this.changeReadMore}>Hide</button>
                         </div>                        
@@ -38,6 +36,8 @@ class App extends Component {
                 }   
                 <hr/>  
                 <Projects/>
+                <hr/>  
+                <SocialProfiles/>
             </div>
         )
     }
