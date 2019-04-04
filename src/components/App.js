@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import Projects from './Projects';
 import SocialProfiles from './SocialProfiles';
-import Title from './Titles'
-import Jokes from './Jokes'
-
+import Title from './Titles';
 
 class App extends Component {
 
@@ -26,21 +24,19 @@ class App extends Component {
                 <Title/>
                 {
                     this.state.readMore ? (
-                        <div> 
-                            
+                        <div>
                             <p> I am living in Da Nang and working for Fsoft </p>
                             <button onClick={this.changeReadMore}>Hide</button>
                         </div>                        
                     ) : (
                         <button onClick={this.changeReadMore}>Read More</button>
                     )
-                }   
-                <hr/>  
+                }
+                <hr/>
                 <Projects/>
-                <hr/>  
+                <hr/>
                 <SocialProfiles/>
-                <hr/>  
-                <Jokes/>
+                <hr/>
             </div>
         )
     }
